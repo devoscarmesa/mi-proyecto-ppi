@@ -1,0 +1,33 @@
+{
+  "name": "mi-proyecto-ppi-1",
+  "version": "1.0.0",
+  "description": "Proyecto tipo PPI, similar a como los equipos de los colegios deben realizar el despliegue de un proyecto que integre los diferentes componentes de un proyecto de este tipo.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.14.0",
+    "react-notifications": "^1.7.2",
+    "react-router-dom": "^5.2.0",
+    "react-bootstrap-dialog": "^0.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devoscarmesa/mi-proyecto-ppi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devoscarmesa/mi-proyecto-ppi/issues"
+  },
+  "homepage": "https://github.com/devoscarmesa/mi-proyecto-ppi#readme"
+}

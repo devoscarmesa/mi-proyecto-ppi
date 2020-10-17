@@ -1,0 +1,27 @@
+{
+  "name": "mi-proyecto-ppi",
+  "version": "1.0.0",
+  "description": "Proyecto tipo PPI, similar a como los equipos de los colegios deben realizar el despliegue de un proyecto que integre los diferentes componentes de un proyecto de este tipo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devoscarmesa/mi-proyecto-ppi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devoscarmesa/mi-proyecto-ppi/issues"
+  },
+  "homepage": "https://github.com/devoscarmesa/mi-proyecto-ppi#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.5"
+  }
+}

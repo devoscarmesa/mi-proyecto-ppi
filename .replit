@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "npm run dev"
+run = "cd backend-mi-proyecto-ppi && npm run dev"
