@@ -1,2 +1,2 @@
-language = "batch"
+language = "bash"
 run = "cd backend-mi-proyecto-ppi && npm run dev"
