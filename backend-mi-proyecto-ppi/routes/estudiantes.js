@@ -1,20 +1,28 @@
 const { Router } = require("express")
 const router = Router()
 const fs = require("fs")
-const FileEstudiantes = fs.readFileSync('./estudiantes.json', 'utf-8')
-const JSONEstudiantes = JSON.parse(FileEstudiantes)
+var app = require("express")()
+
+let FileEstudiantes = null
+let JSONEstudiantes = null
+
+const loadFile = (req) => {
+  FileEstudiantes = fs.readFileSync(`${req.app.get('ABSOLUTE_PATH')}estudiantes.json`, 'utf-8')
+  JSONEstudiantes = JSON.parse(FileEstudiantes)
+}
 
 router.get("/", (req, res) => {
   res.send("API REST Estudianetes")
 })
 
 router.get("/estudiantes", (req, res) => {
+  loadFile(req)
   res.json(JSONEstudiantes)
 })
 
 router.get("/estudiantes/:id", (req, res) => {
   let id = req.params.id
-
+  loadFile(req)
   let estudiante_encontrado = JSONEstudiantes.find(estudiante => estudiante.id == id)
 
   if (estudiante_encontrado != undefined)
@@ -25,6 +33,7 @@ router.get("/estudiantes/:id", (req, res) => {
 
 router.post("/estudiantes", (req, res) => {
   let id = JSONEstudiantes.length + 1
+  loadFile(req)
   /** Captura de información por Destructuring */
   let {
     nombre,
@@ -59,7 +68,7 @@ router.put("/estudiantes/:id", (req, res) => {
     correo,
     html
   } = req.body
-
+  loadFile(req)
   let estudiante_encontrado = JSONEstudiantes.find(estudiante => {
     if (estudiante.id == id) {
       estudiante.nombre = nombre
@@ -80,7 +89,7 @@ router.put("/estudiantes/:id", (req, res) => {
 
 router.delete("/estudiantes/:id", (req, res) => {
   let id = req.params.id
-  
+  loadFile(req)
   let indiceEstudiante = JSONEstudiantes.findIndex(estudiante => estudiante.id == id)
   
   if(indiceEstudiante != -1){

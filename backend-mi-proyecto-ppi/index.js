@@ -14,8 +14,9 @@ app.get("/", (req, res) => {
   res.send("Api CRUD")
 })
 
-app.set("puerto", 8081)
+app.set("ABSOLUTE_PATH", `${__dirname}/`)
+app.set("PORT", 8081)
 
-app.listen(app.get("puerto"), () => {
-  console.log(`Servidor corriendo en el puerto ${app.get("puerto")}`)
+app.listen(app.get("PORT"), () => {
+  console.log(`Servidor corriendo en el puerto ${app.get("PORT")}`)
 })
