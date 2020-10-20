@@ -1,9 +1,9 @@
 const mysql      = require('mysql');
 const connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '',
-  database : 'media_tecnica_app'
+  host     : 'br9cpdzhfcmkt1tmto3k-mysql.services.clever-cloud.com',
+  user     : 'uns8d5a55y0ltild',
+  password : 'bGRWLU2XFBYkYOecsJQo',
+  database : 'br9cpdzhfcmkt1tmto3k'
 });
 
 connection.connect((error) => {
