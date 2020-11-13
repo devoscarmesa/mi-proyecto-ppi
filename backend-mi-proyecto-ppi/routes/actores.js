@@ -3,9 +3,11 @@ const router = Router()
 const {connection} = require('../db/mysql')
     
 router.get("/actores", (req, res) => {
+    connection.connect()
     connection.query('SELECT * FROM actores',  (error, rows, fields) => {
         if(!error){
-            res.json(rows)
+          connection.end()
+          res.json(rows)
         }else{
             res.json({error: "Error ejecutando la consulta"})
         }
